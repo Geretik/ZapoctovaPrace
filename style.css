@@ -575,25 +575,29 @@ iframe {
 
 /* footer */
 
-.footer__img {
-    width: 10%;
-    height: auto;
-}
-
-.footer__flex {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-}
-
-.social_media--flex {
-    display: flex;
-    flex-direction: row;
+.social_media__inner-flex {
+    display: inline-flex;
     gap: 1em;
 }
 
-.footer__item--end {
-
+.sm__img {
+    height: 3em;
+    width: 3em;
 }
 
+.flex--footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+@media (min-width: 360px) and (max-width: 559px) {
+    .flex--footer {
+        flex-direction: column;
+        justify-self: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+}
 
