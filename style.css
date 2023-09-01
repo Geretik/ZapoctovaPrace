@@ -47,7 +47,6 @@ h1 {
     font-size: 6em;
     font-weight: 800;
     white-space: nowrap;
-
 }
 
 h2 {
@@ -78,75 +77,95 @@ h3 {
 .hello {
     color: #0b0b15;
     font-weight: 400;
-    font-size: 1em;
+    font-size: 1.25em;
+    line-height: 1.5em;
+    margin-bottom: -1em;
 }
 
 .after_hello {
     color: #ff9301;
-    margin-bottom: 1em;
+    margin-top: -1em;
+    font-weight: 800;
+    font-size: 2em;
 }
 
 .after_hello--text {
-    margin-top: 2em;
     margin-bottom: 2em;
+    font-size: 0.9em;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+@media (min-width: 360px) and (max-width: 559px) {
+    .flex--name {
+        width: 100%;
+    }
+
+    .after_hello--text {
+        margin: 0 auto;
+        min-width: 100%;
+    }
+}
+
+/* Navigation */
+.navigation {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    flex-wrap: nowrap;
+    margin-bottom: 1em;
+    min-width: 100%;
 }
 
 .navigation--item {
     text-decoration: none;
     color: #555555;
-    margin: 1em 1em 1em 1em;
+    white-space: nowrap;
 }
 
-.navigation--item:hover {
-    border-bottom: #ff9301 solid 3px;
-    padding-bottom: 0.5em;
-}
+@media (min-width: 360px) and (max-width: 559px) {
 
-@media screen and (min-width: 960px) {
-    .navigation {
-        margin-left: -1em;
-        height: 3em;
-    }
-}
-
-@media (min-width: 360px) and (max-width: 959px) {
     .navigation {
         display: grid;
-        grid-template-rows: auto auto;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
         gap: 1em;
+        margin-top: 1em;
     }
 
-    .navigation--item:hover {}
-
     .navigation--item {
-        display: block;
-        background-color: #ff9301;
-        padding: 1em 1em 1em 3em;
-        margin: 0 auto;
+        display: flex;
+        background-color: #ff9101;
+        height: 3em;
         width: 8em;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        color: #0b0b15;
     }
 }
 
-@media screen and (min-width: 960px) {
+@media (min-width: 560px) {
+    .navigation--item:hover {
+        border-bottom: #ff9301 solid 3px;
+        margin-bottom: -0.5em;
+    }
+}
+
+@media (min-width: 960px) {
     .navigation::after {
         content: "";
-        padding: 40em 5em 5em 28em;
+        padding: 30em 50em 20em 20em;
         border-radius: 50%;
-        border-bottom-right-radius: 1em;
-        border-top-right-radius: 1em;
         background-image: url("./images/avatar.svg");
         background-color: #ff910180;
         background-repeat: no-repeat;
         background-size: 25em;
         background-position: 8em 20em;
-    }
-
-}
-
-@media (min-width: 360px) and (max-width: 959px) {
-    .navigation::after {
-        content: "";
+        width: 40%;
+        margin-bottom: -20em;
+        margin-left: 1em;
+        margin-top: -40em;
+        margin-right: -3em;
     }
 }
 
@@ -161,8 +180,8 @@ h3 {
 .avatar_picture {
     background-color: #ff9101;
     border-radius: 50%;
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 20em;
+    max-height: 20em;
     margin-bottom: 1.5em;
 }
 
@@ -200,10 +219,7 @@ h3 {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin-top: 0;
-        margin-right: 10em;
-        margin-left: auto;
-        margin-bottom: 0;
+        margin: 0 auto;
     }
 }
 
@@ -305,7 +321,6 @@ h3 {
 }
 
 /* Avards */
-
 .awards__flex {
     display: flex;
     flex-direction: row;
@@ -331,7 +346,6 @@ h3 {
 }
 
 /* Experiences */
-
 h3 {
     font-weight: 800;
 }
@@ -389,7 +403,7 @@ h3 {
 }
 
 @media (min-width: 360px) and (max-width: 559px) {
-    .job_experience{
+    .job_experience {
         flex-direction: column;
     }
 }
@@ -427,7 +441,7 @@ h3 {
 }
 
 /* My Portfolio */
-.my__portfolio--grid span{
+.my__portfolio--grid span {
     color: #0b0b15;
 }
 
@@ -515,7 +529,7 @@ textarea {
     padding-top: 1em;
 }
 
-.inner_flex{
+.inner_flex {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -528,7 +542,7 @@ textarea {
 }
 
 @media (min-width: 560px) and (max-width: 959px) {
-    .conatact_main_flex{
+    .conatact_main_flex {
         flex-direction: column;
     }
 
@@ -540,11 +554,11 @@ textarea {
 
 
 @media (min-width: 360px) and (max-width: 559px) {
-    .conatact_main_flex{
+    .conatact_main_flex {
         flex-direction: column;
     }
 
-    .inner_flex{
+    .inner_flex {
         flex-direction: column;
         flex-wrap: wrap;
     }
@@ -574,7 +588,6 @@ iframe {
 
 
 /* footer */
-
 .social_media__inner-flex {
     display: inline-flex;
     gap: 1em;
