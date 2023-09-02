@@ -349,10 +349,10 @@ h3 {
 .awards__flex {
     display: flex;
     flex-direction: row;
-    gap: 1em;
     margin: 0 auto;
     justify-self: center;
     width: 100%;
+    gap: 1em;
 }
 
 .awards__flex--item {
@@ -360,15 +360,38 @@ h3 {
     display: flex;
     flex-direction: column;
     background: white;
-    width: 33%;
+    width: 30%;
     align-items: center;
+    align-content: center;
     justify-content: center;
+    justify-items: center;
     height: 10em;
+    margin: 0 1em;
+    text-align: center;
 }
 
 .awards--img {
     max-width: 3em;
     margin-bottom: 0.5em;
+}
+
+@media (min-width: 360px) and (max-width: 559px) {
+
+    .awards__flex {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .awards__flex--item {
+        flex-direction: row;
+        min-width: 96%;
+        height: 6em;
+        justify-content: flex-start;
+        padding-left: 1em;
+        gap: 1em;
+        margin: 0 auto;
+    }
+
 }
 
 /* Experiences */
