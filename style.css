@@ -30,7 +30,6 @@ section {
     display: table;
     background-color: #f7f7ff;
     /*width: 100%;*/
-    max-width: none;
 }
 
 p {
@@ -46,6 +45,7 @@ span {
 h1 {
     font-size: 6em;
     font-weight: 800;
+    color: #0b0b15;
     white-space: nowrap;
 }
 
@@ -57,6 +57,7 @@ h2 {
 
 h3 {
     color: #0b0b15;
+    font-weight: 800;
 }
 
 .flex--name {
@@ -87,6 +88,7 @@ h3 {
     margin-top: -1em;
     font-weight: 800;
     font-size: 2em;
+    white-space: nowrap;
 }
 
 .after_hello--text {
@@ -160,7 +162,7 @@ h3 {
         background-color: #ff910180;
         background-repeat: no-repeat;
         background-size: 25em;
-        background-position: 8em 20em;
+        background-position: 8em 21em;
         width: 40%;
         margin-bottom: -20em;
         margin-left: 1em;
@@ -174,13 +176,19 @@ h3 {
 /* Avatar */
 .biography--text {
     font-size: 0.9em;
+    color: #555555;
+    margin: 0.5em 0.5em 0.5em 0;
+}
+
+.biography--title {
+    margin-bottom: 0.5em;
 }
 
 .avatar_picture {
     background-color: #ff9101;
     border-radius: 50%;
-    max-width: 12em;
-    max-height: 12em;
+    max-width: 16em;
+    max-height: 16em;
     /*margin-bottom: 1.5em;*/
 }
 
@@ -199,7 +207,7 @@ h3 {
     .biography__flex {
         display: flex;
         flex-direction: row;
-        gap: 5em;
+        gap: 2em;
         width: 100%;
     }
 
@@ -209,6 +217,13 @@ h3 {
         align-items: center;
         margin: 0 auto;
         justify-content: center;
+        width: 40%;
+    }
+
+    .biography {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
     }
 }
 
@@ -216,8 +231,9 @@ h3 {
     .biography__flex {
         display: flex;
         flex-direction: column;
-        gap: 5em;
+        gap: 1em;
         width: 100%;
+        margin-bottom: 1em;
     }
 
     .photo__flex {
@@ -225,21 +241,22 @@ h3 {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin: 0 auto;
+        margin: 1em auto 0;
+    }
+
+    .biography {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
 }
 
 .section--beginning::before {
     content: "";
-    padding: .7em .9em 0 .9em;
-    margin: 0 -1.2em 0 -.6em;
+    padding: 0.5em 0.9em 0 0.7em;
+    margin: 0 -1.2em 0 -0.6em;
     background-color: #ff910180;
     border-radius: 50%;
-}
-
-.biography {
-    display: flex;
-    flex-direction: column;
 }
 
 /* What I Do section */
@@ -249,7 +266,7 @@ h3 {
     padding: 1em 50%;
     background-image: url('./images/border-dark.png');
     background-repeat: repeat-x;
-    background-size: 300px 12px;
+    background-size: 13em 0.5em;
 }
 
 .what__i__do {
@@ -339,7 +356,7 @@ h3 {
 }
 
 .awards__flex--item {
-    border-radius: 0.3em;
+    border-radius: 1em;
     display: flex;
     flex-direction: column;
     background: white;
@@ -350,103 +367,93 @@ h3 {
 }
 
 .awards--img {
-    max-width: 4em;
+    max-width: 3em;
+    margin-bottom: 0.5em;
 }
 
 /* Experiences */
-h3 {
-    font-weight: 800;
-}
 
-.job--flex {
+.experience--flex {
     display: flex;
     flex-direction: column;
     gap: 1em;
     margin: 0 auto;
-    justify-content: center;
 }
 
-.job_experience {
+.experience--item {
     display: flex;
     flex-direction: row;
+    gap: 1em;
     background-color: #f7f7ff;
-    margin: 0 auto;
+    border-radius: 1em;
+}
+
+.experience--time--flex {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    justify-items: center;
+    align-self: center;
+    margin: 0 auto 0 3em;
+}
+
+.experience__item--text {
+    width: 80%;
+    margin-right: 3em;
+}
+
+.experience__contract {
+    display: flex;
+    padding: 0.5em;
+    width: 5em;
     border-radius: 0.3em;
-}
-
-.job_experience--item {
-    display: flex;
-    flex-direction: column;
+    color: white;
+    align-content: center;
     justify-content: center;
-    margin-left: 3em;
+    font-size: 1em;
 }
 
-.job_experience--item--time {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 3em;
-    max-width: 30%;
+.experience--time {
+    font-size: 1em;
 }
 
-.experience--separator {
-    display: block;
-    border-left: 1px #eeeeee solid;
-    margin-left: -5em;
-    padding: 1em 1em 1em 5em;
+.experience__contract--full_time {
+    background-color: #ff9101;
+}
+
+.experience__contract--part_time {
+    background-color: #555555;
 }
 
 @media (min-width: 560px) and (max-width: 959px) {
-    .job_experience--item--time {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-left: 3em;
-        max-width: 25%;
-    }
-
     .experience--time {
-        max-width: 5em;
+
     }
 }
 
 @media (min-width: 360px) and (max-width: 559px) {
-    .job_experience {
+    .experience--item {
         flex-direction: column;
     }
+
+    .experience--time--flex {
+        align-self: flex-start;
+        margin-left: 1.5em;
+        margin-top: 1.5em;
+        width: 10em;
+    }
+
+    .experience__item--text {
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+        margin-top: 0;
+        margin-bottom: 0;
+        width: 90%;
+    }
+
 }
 
-.full_time {
-    display: block;
-    background: #ff9301;
-    padding-top: 0.5em;
-    padding-right: 0;
-    padding-left: 1em;
-    padding-bottom: 0.5em;
-    margin-top: 1em;
-    margin-right: 15em;
-    margin-left: 0;
-    margin-bottom: 1em;
-    width: 5em;
-    border-radius: 0.3em;
-    color: white;
-}
 
-.part_time {
-    display: block;
-    background: #555555;
-    padding-top: 0.5em;
-    padding-right: 0;
-    padding-left: 1em;
-    padding-bottom: 0.5em;
-    margin-top: 1em;
-    margin-right: 15em;
-    margin-left: 0;
-    margin-bottom: 1em;
-    width: 5em;
-    border-radius: 0.3em;
-    color: white;
-}
 
 /* My Portfolio */
 .my__portfolio--grid span {
@@ -550,7 +557,7 @@ textarea {
 }
 
 .form--border {
-    border: #555555 solid 1px;
+    border: #bbbbbb solid 1px;
 }
 
 @media (min-width: 560px) and (max-width: 959px) {
@@ -589,7 +596,8 @@ textarea {
     color: white;
     padding: 1em;
     border-radius: 0.3em;
-    width: 10em;
+    width: 9em;
+    font-weight: 800;
 }
 
 iframe {
