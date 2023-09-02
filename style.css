@@ -29,7 +29,7 @@ section {
 .section--secondary {
     display: table;
     background-color: #f7f7ff;
-    width: 100%;
+    /*width: 100%;*/
     max-width: none;
 }
 
@@ -176,18 +176,23 @@ h3 {
     font-size: 0.9em;
 }
 
-
 .avatar_picture {
     background-color: #ff9101;
     border-radius: 50%;
-    max-width: 20em;
-    max-height: 20em;
-    margin-bottom: 1.5em;
+    max-width: 12em;
+    max-height: 12em;
+    /*margin-bottom: 1.5em;*/
 }
 
 .picture__text--primary {
     font-size: 1.5em;
     font-weight: 800;
+    color: #0b0b15;
+}
+
+.picture__text--secondary {
+    color: #ff9101;
+    font-size: 0.9em    ;
 }
 
 @media screen and (min-width: 960px) {
@@ -203,6 +208,7 @@ h3 {
         flex-direction: column;
         align-items: center;
         margin: 0 auto;
+        justify-content: center;
     }
 }
 
@@ -312,12 +318,14 @@ h3 {
 }
 
 .what__i__do--subtitle {
-    margin-top: 4em;
-    font-weight: bold;
+    margin-top: 5em;
+    font-weight: 800;
+    color: #0b0b15;
 }
 
 .what__i__do--text {
     font-size: 0.9em;
+    color: #555555;
 }
 
 /* Avards */
@@ -470,7 +478,7 @@ h3 {
 
 
 /* Contact */
-.conatact_main_flex {
+.contact_main_flex {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -481,7 +489,7 @@ h3 {
     width: 50%;
 }
 
-.form_flex {
+.form--flex {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -541,8 +549,12 @@ textarea {
     width: 50%;
 }
 
+.form--border {
+    border: #555555 solid 1px;
+}
+
 @media (min-width: 560px) and (max-width: 959px) {
-    .conatact_main_flex {
+    .contact_main_flex {
         flex-direction: column;
     }
 
@@ -554,7 +566,7 @@ textarea {
 
 
 @media (min-width: 360px) and (max-width: 559px) {
-    .conatact_main_flex {
+    .contact_main_flex {
         flex-direction: column;
     }
 
