@@ -307,7 +307,7 @@ h3 {
     padding: 2em 1em 1em;
     margin: 0 auto;
     background: white;
-    border-radius: 0.3em;
+    border-radius: 1em;
     overflow: hidden;
 }
 
@@ -380,7 +380,7 @@ h3 {
 }
 
 .awards__flex--item {
-    border-radius: 0.3em;
+    border-radius: 1em;
     display: flex;
     flex-direction: column;
     background: white;
@@ -432,7 +432,7 @@ h3 {
     flex-direction: row;
     gap: 1em;
     background-color: #f7f7ff;
-    border-radius: 0.75em;
+    border-radius: 1em;
 }
 
 .experience--time--flex {
