@@ -285,7 +285,7 @@ h3 {
 
 /* What I Do section */
 
-#What_I_Do::before {
+#what_i_do::before {
     content: "";
     padding: 1em 50%;
     background-image: url('./images/border-dark.png');
@@ -301,7 +301,7 @@ h3 {
     margin: 0 auto;
 }
 
-.What_I_Do--item {
+.what_i_do--item {
     display: flex;
     flex-direction: column;
     padding: 2em 1em 1em;
@@ -512,8 +512,6 @@ h3 {
     }
 }
 
-
-
 /* My Portfolio */
 .my__portfolio--grid span {
     color: #0b0b15;
@@ -630,7 +628,6 @@ textarea {
 
 }
 
-
 @media (min-width: 360px) and (max-width: 559px) {
     .contact_main_flex {
         flex-direction: column;
@@ -679,19 +676,18 @@ iframe {
     width: 3em;
 }
 
-.flex--footer {
+.footer--flex {
     display: flex;
     justify-content: space-between;
     padding: 1em;
 }
 
 @media (min-width: 360px) and (max-width: 559px) {
-    .flex--footer {
+    .footer--flex {
         flex-direction: column;
         justify-self: center;
         align-items: center;
         margin: 0 auto;
     }
-
 }
 
